@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #00FFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1200px;
+}
+
+.card {
+    width: 420px;
+    height: 420px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.front,
+.forget-page,
+.signup-page {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background-color: #996699;
+    border-radius: 50%;
+    box-shadow:
+        20px 20px 60px #bebebe,
+        -20px -20px 60px #663399;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.forget-page,
+.signup-page {
+    transform: rotateY(180deg);
+    display: none;
+}
+
+.card.show-forgot .forget-page {
+    display: flex;
+}
+
+.card.show-signup .signup-page {
+    display: flex;
+}
+
+.in {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.in i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000000;
+}
+
+.in input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    background-color: aliceblue;
+    border-radius: 25px;
+    box-shadow:
+        inset 5px 5px 10px #bebebe,
+        inset -5px -5px 10px #ffffff;
+}
+
+.sign-btn {
+    width: 150px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #CC0000;
+    color: white;
+    cursor: pointer;
+    box-shadow:
+        5px 5px 10px #bebebe,
+        -5px -5px 10px #ffffff;
+    transition: 0.2s;
+}
+
+.sign-btn:active {
+    box-shadow:
+        inset 3px 3px 6px #bebebe,
+        inset -3px -3px 6px #ffffff;
+}
+
+.other {
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+
+.swap {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+}
+
+.control {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e0e0e0;
+    border-radius: 16px;
+    box-shadow: inset 2px 2px 5px #bebebe;
+}
+
+.control:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 2px;
+    background: #a61c1c;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .control:before {
+    transform: translateX(14px);
+}
+
+a {
+    color: #0000EE;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="front">
+
+        <h2>ログイン画面(Login)</h2>
+
+        <p class="subtitle">
+            入力してください(Sign in to your account)
+        </p>
+
+        <div class="in">
+            <i class="put"></i>
+            <input type="text"
+            id="login-username"
+            placeholder="ユーザー名(Username)">
+        </div>
+
+        <div class="in">
+            <i class="put"></i>
+            <input type="password"
+            id="login-password"
+            placeholder="パスワード(password)">
+        </div>
+
+        <div class="other">
+            <label class="remember">
+                <div class="swap">
+                    <input type="checkbox" id="check" checked>
+                    <span class="control"></span>
+                </div>
+                自動ログイン(remember me)
+            </label>
+
+            <a href="#" class="forget" id="forgot">
+                パスワードをお忘れの方(forgot password?)
+            </a>
+        </div>
+
+        <button class="sign-btn" id="login-btn">
+            サインイン(sign in)
+        </button>
+
+        <div class="footer">
+            アカウントをお持ちでない方。
+            <a href="#" id="signup">
+                サインアップ(Sign up)
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="forget-page">
+
+        <h2>パスワード再設定</h2>
+
+        <p class="subtitle">
+            登録したメールアドレスを入力してください
+        </p>
+
+        <div class="in">
+            <input type="email" placeholder="メールアドレス(Email)">
+        </div>
+
+        <button class="sign-btn">
+            再設定メールを送信
+        </button>
+
+        <div class="footer">
+            <a href="#" class="back-login">
+                ログイン画面に戻る
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="signup-page">
+
+        <h2>アカウント作成</h2>
+
+        <p class="subtitle">
+            新しいアカウントを入力してください
+        </p>
+
+        <div class="in">
+            <input type="text" 
+            placeholder="ユーザ名(Username)">
+        </div>
+
+        <div class="in">
+            <input type="email" placeholder="メールアドレス(Email)">
+        </div>
+
+        <div class="in">
+            <input type="password" placeholder="パスワード(Password)">
+        </div>
+
+        <button class="sign-btn">
+            アカウント作成
+        </button>
+
+        <div class="footer">
+            <a href="#" class="back-login">
+                ログイン画面に戻る
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>
